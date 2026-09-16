@@ -7,16 +7,12 @@
     <title>Sakshi Singh | Data Analyst Portfolio</title>
 
     <meta name="description"
-        content="Sakshi Singh — Data Analyst specializing in SQL, Python, Power BI, Advanced Excel, ETL and AI/ML.">
+          content="Sakshi Singh - Data Analyst specializing in SQL, Python, Power BI, Tableau, Advanced Excel and AI/ML.">
 
-    <meta name="author" content="Sakshi Singh">
-
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Font Awesome -->
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <script>
         tailwind.config = {
@@ -32,7 +28,6 @@
     </script>
 
     <style>
-
         html {
             scroll-behavior: smooth;
         }
@@ -41,59 +36,47 @@
             overflow-x: hidden;
         }
 
-        .btn-hover {
-            transition: all 0.3s ease;
-        }
-
-        .btn-hover:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 25px -8px rgba(37, 99, 235, 0.45);
-        }
-
-        .interactive-card {
-            transition:
-                transform 0.35s ease,
-                box-shadow 0.35s ease,
-                border-color 0.35s ease;
-
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(12px);
-
-            border: 1px solid rgba(15, 23, 42, 0.06);
-        }
-
-        .dark .interactive-card {
-            background: rgba(15, 23, 42, 0.75);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-        }
-
-        .interactive-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px -18px rgba(37, 99, 235, 0.28);
-            border-color: rgba(37, 99, 235, 0.55);
-        }
-
         .gradient-text {
             background: linear-gradient(90deg, #2563eb, #7c3aed);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .status-dot {
-            width: 9px;
-            height: 9px;
-            background: #22c55e;
-            border-radius: 50%;
-            display: inline-block;
-            box-shadow: 0 0 0 5px rgba(34, 197, 94, 0.12);
+        .glass {
+            background: rgba(255,255,255,0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0,0,0,0.06);
         }
 
-        .skill-pill {
-            transition: all 0.25s ease;
+        .dark .glass {
+            background: rgba(15,23,42,0.75);
+            border-color: rgba(255,255,255,0.08);
         }
 
-        .skill-pill:hover {
-            transform: translateY(-2px);
+        .card {
+            transition: 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 20px 40px rgba(37,99,235,0.15);
+        }
+
+        .skill {
+            transition: 0.25s ease;
+        }
+
+        .skill:hover {
+            transform: translateY(-3px);
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 8vw, 6.5rem);
+            line-height: 0.95;
+        }
+
+        .timeline {
+            border-left: 2px solid #2563eb;
         }
 
         .project-card {
@@ -108,1227 +91,715 @@
             left: 0;
             width: 100%;
             height: 4px;
-            background: linear-gradient(90deg, #2563eb, #7c3aed);
+            background: linear-gradient(90deg,#2563eb,#7c3aed);
         }
-
-        .timeline-line {
-            position: absolute;
-            left: 11px;
-            top: 28px;
-            bottom: -28px;
-            width: 2px;
-            background: #dbeafe;
-        }
-
-        .dark .timeline-line {
-            background: #1e3a8a;
-        }
-
-        @media (max-width: 768px) {
-
-            .hero-title {
-                font-size: 3rem;
-                line-height: 1.05;
-            }
-
-        }
-
     </style>
-
 </head>
 
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-white transition-colors duration-300">
 
-<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
-
-
-<!-- ========================================================= -->
 <!-- NAVBAR -->
-<!-- ========================================================= -->
+<nav class="fixed top-0 w-full z-50 glass">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
-<nav class="p-4 md:p-5 flex justify-between items-center
-            bg-white/85 dark:bg-slate-900/85 backdrop-blur-md
-            sticky top-0 z-50 border-b
-            border-slate-200 dark:border-slate-800">
-
-    <a href="#home"
-        class="text-2xl font-black text-primary tracking-tighter">
-        SK.
-    </a>
-
-
-    <div class="hidden md:flex space-x-7 text-xs font-bold uppercase tracking-wider">
-
-        <a href="#home" class="hover:text-primary transition">
-            Home
+        <a href="#home" class="text-2xl font-bold gradient-text">
+            Sakshi Singh
         </a>
 
-        <a href="#about" class="hover:text-primary transition">
-            About
-        </a>
+        <div class="hidden md:flex gap-7 font-medium">
+            <a href="#home" class="hover:text-blue-600">Home</a>
+            <a href="#about" class="hover:text-blue-600">About</a>
+            <a href="#skills" class="hover:text-blue-600">Skills</a>
+            <a href="#experience" class="hover:text-blue-600">Experience</a>
+            <a href="#projects" class="hover:text-blue-600">Projects</a>
+            <a href="#contact" class="hover:text-blue-600">Contact</a>
+        </div>
 
-        <a href="#skills" class="hover:text-primary transition">
-            Skills
-        </a>
-
-        <a href="#projects" class="hover:text-primary transition">
-            Projects
-        </a>
-
-        <a href="#experience" class="hover:text-primary transition">
-            Experience
-        </a>
-
-        <a href="#contact" class="hover:text-primary transition">
-            Contact
-        </a>
-
-    </div>
-
-
-    <div class="flex items-center gap-3">
-
-        <button onclick="toggleTheme()"
-            class="p-2.5 rounded-full
-                   bg-slate-100 dark:bg-slate-800
-                   text-yellow-500 dark:text-blue-400">
-
-            <i id="theme-icon" class="fas fa-moon"></i>
-
+        <button onclick="toggleDarkMode()"
+                class="text-xl ml-4"
+                aria-label="Toggle dark mode">
+            <i id="themeIcon" class="fas fa-moon"></i>
         </button>
-
-
-        <a href="mailto:sakshisinghss0929@gmail.com"
-            class="hidden sm:inline-block
-                   bg-primary text-white
-                   px-5 py-2.5 rounded-lg
-                   text-sm font-bold
-                   hover:bg-blue-700 shadow-md transition">
-
-            Let's Connect
-
-        </a>
-
     </div>
-
 </nav>
 
 
-<!-- ========================================================= -->
 <!-- HERO -->
-<!-- ========================================================= -->
+<section id="home"
+         class="min-h-screen flex items-center pt-24 px-6">
 
-<header id="home"
-    class="relative py-20 md:py-28 px-6 overflow-hidden">
+    <div class="max-w-7xl mx-auto w-full">
 
-    <div class="absolute inset-0 -z-10">
+        <div class="max-w-5xl">
 
-        <div class="absolute top-10 left-1/4
-                    w-72 h-72 bg-blue-500/10
-                    rounded-full blur-3xl">
-        </div>
+            <div class="flex items-center gap-3 mb-6">
+                <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+                <span class="text-green-600 font-semibold">
+                    Open to Work
+                </span>
+            </div>
 
-        <div class="absolute bottom-0 right-1/4
-                    w-72 h-72 bg-purple-500/10
-                    rounded-full blur-3xl">
-        </div>
-
-    </div>
-
-
-    <div class="max-w-5xl mx-auto text-center">
-
-
-        <!-- Availability -->
-
-        <div class="inline-flex items-center gap-2
-                    px-4 py-2 rounded-full
-                    bg-green-50 dark:bg-green-900/20
-                    text-green-600 dark:text-green-400
-                    text-xs font-bold mb-7">
-
-            <span class="status-dot"></span>
-
-            Open to Work
-
-        </div>
-
-
-        <p class="text-primary font-bold uppercase
-                  tracking-[0.25em] text-xs md:text-sm mb-4">
-
-            Data Analyst • BI • ETL • AI/ML
-
-        </p>
-
-
-        <h1 class="hero-title text-5xl md:text-7xl
-                   font-black tracking-tight mb-6">
-
-            Sakshi
-
-            <span class="gradient-text">
-                Singh
-            </span>
-
-        </h1>
-
-
-        <p class="max-w-3xl mx-auto text-lg md:text-xl
-                  text-slate-600 dark:text-slate-400
-                  leading-relaxed mb-10">
-
-            Turning raw data into
-
-            <span class="font-bold text-slate-800 dark:text-white">
-                actionable business insights
-            </span>
-
-            using SQL, Python, Power BI,
-            Advanced Excel and AI-powered analytics.
-
-        </p>
-
-
-        <!-- Buttons -->
-
-        <div class="flex flex-wrap justify-center gap-4">
-
-
-            <a href="Sakshi_Singh_Resume.pdf"
-                download
-                class="btn-hover bg-primary text-white
-                       px-7 py-3.5 rounded-xl font-bold
-                       flex items-center">
-
-                <i class="fas fa-file-pdf mr-3"></i>
-
-                Download Resume
-
-            </a>
-
-
-            <a href="https://github.com/Sakshisingh895"
-                target="_blank"
-                class="btn-hover bg-slate-900
-                       dark:bg-white dark:text-slate-900
-                       text-white px-7 py-3.5
-                       rounded-xl font-bold
-                       flex items-center">
-
-                <i class="fab fa-github mr-3"></i>
-
-                GitHub
-
-            </a>
-
-
-            <a href="mailto:sakshisinghss0929@gmail.com"
-                class="btn-hover border
-                       border-slate-300
-                       dark:border-slate-700
-                       px-7 py-3.5 rounded-xl
-                       font-bold flex items-center">
-
-                <i class="fas fa-envelope mr-3"></i>
-
-                Contact Me
-
-            </a>
-
-        </div>
-
-    </div>
-
-</header>
-
-
-<!-- ========================================================= -->
-<!-- ABOUT -->
-<!-- ========================================================= -->
-
-<section id="about"
-    class="max-w-6xl mx-auto py-20 px-6">
-
-
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
-
-
-        <div>
-
-            <p class="text-primary font-bold text-xs
-                      uppercase tracking-[0.25em] mb-3">
-
-                Profile
-
+            <p class="text-blue-600 font-semibold text-lg mb-4">
+                Hello, I'm
             </p>
 
+            <h1 class="hero-title font-black mb-8">
+                Sakshi<br>
+                <span class="gradient-text">Singh</span>
+            </h1>
 
-            <h2 class="text-4xl font-black mb-6">
-
-                About Me
-
+            <h2 class="text-2xl md:text-4xl font-bold mb-6">
+                Data Analyst | Power BI | SQL | Python | AI/ML
             </h2>
 
-
-            <div class="h-1 w-20 bg-primary mb-7"></div>
-
-
-            <p class="text-slate-600 dark:text-slate-400
-                      text-lg leading-relaxed mb-6">
-
-                I'm a
-
-                <span class="text-primary font-bold">
-                    Data Analyst
-                </span>
-
-                with 2+ years of experience working with
-                SQL, Python, Power BI, Advanced Excel,
-                ETL pipelines and business reporting.
-
+            <p class="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed mb-10">
+                Data Analyst with hands-on experience in data cleaning,
+                analysis, dashboard development, KPI reporting and
+                business intelligence. I transform raw data into
+                meaningful insights using SQL, Python, Power BI,
+                Tableau and Advanced Excel.
             </p>
 
+            <div class="flex flex-wrap gap-4">
 
-            <p class="text-slate-600 dark:text-slate-400
-                      leading-relaxed mb-7">
+                <a href="#projects"
+                   class="px-7 py-3 bg-blue-600 text-white rounded-xl
+                          font-semibold hover:bg-blue-700 transition">
+                    View Projects
+                </a>
 
-                I specialize in transforming raw and
-                unstructured data into clean datasets,
-                automated reports, interactive dashboards
-                and actionable business insights.
+                <a href="Sakshi_Singh_Resume.pdf"
+                   target="_blank"
+                   class="px-7 py-3 border border-slate-300
+                          dark:border-slate-700 rounded-xl
+                          font-semibold hover:border-blue-500 transition">
+                    <i class="fas fa-download mr-2"></i>
+                    Download Resume
+                </a>
 
-                I also have hands-on exposure to
-                Machine Learning and AI-powered analytics.
-
-            </p>
-
-
-            <div class="flex flex-wrap gap-3">
-
-                <span class="skill-pill px-4 py-2 rounded-full
-                             bg-blue-50 dark:bg-blue-900/30
-                             text-primary text-sm font-bold">
-
-                    SQL
-
-                </span>
-
-
-                <span class="skill-pill px-4 py-2 rounded-full
-                             bg-blue-50 dark:bg-blue-900/30
-                             text-primary text-sm font-bold">
-
-                    Python
-
-                </span>
-
-
-                <span class="skill-pill px-4 py-2 rounded-full
-                             bg-blue-50 dark:bg-blue-900/30
-                             text-primary text-sm font-bold">
-
-                    Power BI
-
-                </span>
-
-
-                <span class="skill-pill px-4 py-2 rounded-full
-                             bg-blue-50 dark:bg-blue-900/30
-                             text-primary text-sm font-bold">
-
-                    Advanced Excel
-
-                </span>
-
-
-                <span class="skill-pill px-4 py-2 rounded-full
-                             bg-blue-50 dark:bg-blue-900/30
-                             text-primary text-sm font-bold">
-
-                    ETL
-
-                </span>
-
-
-                <span class="skill-pill px-4 py-2 rounded-full
-                             bg-blue-50 dark:bg-blue-900/30
-                             text-primary text-sm font-bold">
-
-                    Machine Learning
-
-                </span>
+                <a href="https://github.com/Sakshisingh895"
+                   target="_blank"
+                   class="px-7 py-3 border border-slate-300
+                          dark:border-slate-700 rounded-xl
+                          font-semibold hover:border-blue-500 transition">
+                    <i class="fab fa-github mr-2"></i>
+                    GitHub
+                </a>
 
             </div>
-
-        </div>
-
-
-        <!-- Impact -->
-
-        <div class="space-y-5">
-
-
-            <div class="p-7 bg-white dark:bg-slate-900
-                        rounded-3xl shadow-sm
-                        border border-slate-200
-                        dark:border-slate-800
-                        interactive-card">
-
-                <p class="text-xs uppercase
-                          tracking-widest
-                          text-primary font-black mb-5">
-
-                    Impact
-
-                </p>
-
-
-                <div class="grid grid-cols-2 gap-6">
-
-
-                    <div>
-
-                        <h3 class="text-3xl font-black">
-                            50%
-                        </h3>
-
-                        <p class="text-sm text-slate-500">
-                            Reporting lag reduction
-                        </p>
-
-                    </div>
-
-
-                    <div>
-
-                        <h3 class="text-3xl font-black">
-                            40%
-                        </h3>
-
-                        <p class="text-sm text-slate-500">
-                            Manual effort reduction
-                        </p>
-
-                    </div>
-
-
-                    <div>
-
-                        <h3 class="text-3xl font-black">
-                            99%+
-                        </h3>
-
-                        <p class="text-sm text-slate-500">
-                            Data accuracy
-                        </p>
-
-                    </div>
-
-
-                    <div>
-
-                        <h3 class="text-3xl font-black">
-                            100K+
-                        </h3>
-
-                        <p class="text-sm text-slate-500">
-                            Records analyzed
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- Education -->
-
-            <div class="p-7 bg-white dark:bg-slate-900
-                        rounded-3xl shadow-sm
-                        border border-slate-200
-                        dark:border-slate-800
-                        interactive-card">
-
-                <p class="text-xs uppercase
-                          tracking-widest
-                          text-primary font-black mb-3">
-
-                    Education
-
-                </p>
-
-
-                <h3 class="text-xl font-black mb-2">
-
-                    B.Tech — Computer Science & Engineering
-
-                </h3>
-
-
-                <p class="text-slate-500 dark:text-slate-400">
-
-                    Artificial Intelligence & Machine Learning
-
-                </p>
-
-
-                <p class="text-sm text-primary
-                          font-bold mt-3">
-
-                    2020 – 2024
-
-                </p>
-
-            </div>
-
         </div>
 
     </div>
-
 </section>
 
 
-<!-- ========================================================= -->
-<!-- SKILLS -->
-<!-- ========================================================= -->
+<!-- ABOUT -->
+<section id="about" class="py-24 px-6">
 
-<section id="skills"
-    class="bg-slate-100 dark:bg-slate-900/70
-           py-20 px-6">
+    <div class="max-w-7xl mx-auto">
 
+        <p class="text-blue-600 font-semibold mb-3">
+            ABOUT ME
+        </p>
 
-    <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl md:text-5xl font-bold mb-10">
+            Turning Data Into <span class="gradient-text">Insights</span>
+        </h2>
 
+        <div class="grid md:grid-cols-2 gap-12 items-center">
 
-        <div class="text-center mb-14">
+            <div>
 
-            <p class="text-primary font-bold text-xs
-                      uppercase tracking-[0.25em] mb-3">
+                <p class="text-lg leading-relaxed text-slate-600
+                          dark:text-slate-300 mb-6">
+                    I am a Data Analyst with experience working across
+                    data analysis, business intelligence, reporting and
+                    automation.
+                </p>
 
-                Technical Stack
+                <p class="text-lg leading-relaxed text-slate-600
+                          dark:text-slate-300 mb-6">
+                    My work includes extracting and cleaning data,
+                    building analytical models, creating KPI dashboards,
+                    automating reports and communicating insights to
+                    stakeholders.
+                </p>
 
-            </p>
+                <p class="text-lg leading-relaxed text-slate-600
+                          dark:text-slate-300">
+                    I also have a strong foundation in Artificial
+                    Intelligence and Machine Learning, allowing me to
+                    combine traditional analytics with predictive
+                    approaches.
+                </p>
 
+            </div>
 
-            <h2 class="text-4xl font-black">
+            <div class="grid grid-cols-2 gap-5">
 
-                Tools I Work With
+                <div class="glass card rounded-2xl p-6">
+                    <h3 class="text-3xl font-bold text-blue-600">
+                        2+
+                    </h3>
+                    <p class="mt-2 text-slate-600 dark:text-slate-300">
+                        Years Experience
+                    </p>
+                </div>
 
-            </h2>
+                <div class="glass card rounded-2xl p-6">
+                    <h3 class="text-3xl font-bold text-purple-600">
+                        10+
+                    </h3>
+                    <p class="mt-2 text-slate-600 dark:text-slate-300">
+                        Data & BI Skills
+                    </p>
+                </div>
+
+                <div class="glass card rounded-2xl p-6">
+                    <h3 class="text-3xl font-bold text-blue-600">
+                        40%
+                    </h3>
+                    <p class="mt-2 text-slate-600 dark:text-slate-300">
+                        Reporting Automation
+                    </p>
+                </div>
+
+                <div class="glass card rounded-2xl p-6">
+                    <h3 class="text-3xl font-bold text-purple-600">
+                        5+
+                    </h3>
+                    <p class="mt-2 text-slate-600 dark:text-slate-300">
+                        Portfolio Projects
+                    </p>
+                </div>
+
+            </div>
 
         </div>
 
+    </div>
+</section>
 
-        <div class="grid sm:grid-cols-2
-                    lg:grid-cols-4 gap-6">
 
+<!-- SKILLS -->
+<section id="skills" class="py-24 px-6 bg-slate-100 dark:bg-slate-900">
+
+    <div class="max-w-7xl mx-auto">
+
+        <p class="text-blue-600 font-semibold mb-3">
+            MY TOOLKIT
+        </p>
+
+        <h2 class="text-4xl md:text-5xl font-bold mb-12">
+            Skills & Technologies
+        </h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 
             <!-- Python -->
+            <div class="glass card rounded-2xl p-7">
+                <i class="fab fa-python text-4xl text-blue-600 mb-5"></i>
 
-            <div class="p-7 bg-white dark:bg-slate-800
-                        rounded-3xl text-center
-                        interactive-card">
+                <h3 class="text-xl font-bold mb-5">
+                    Python & Analytics
+                </h3>
 
-                <div class="w-14 h-14
-                            bg-blue-50
-                            dark:bg-blue-900/30
-                            rounded-2xl
-                            flex items-center
-                            justify-center
-                            mx-auto mb-5">
+                <div class="flex flex-wrap gap-2">
 
-                    <i class="fab fa-python
-                              text-3xl text-blue-500">
-                    </i>
+                    <span class="skill px-3 py-2 bg-blue-100 dark:bg-blue-900/30 rounded-lg">
+                        Python
+                    </span>
+
+                    <span class="skill px-3 py-2 bg-blue-100 dark:bg-blue-900/30 rounded-lg">
+                        Pandas
+                    </span>
+
+                    <span class="skill px-3 py-2 bg-blue-100 dark:bg-blue-900/30 rounded-lg">
+                        NumPy
+                    </span>
+
+                    <span class="skill px-3 py-2 bg-blue-100 dark:bg-blue-900/30 rounded-lg">
+                        EDA
+                    </span>
+
+                    <span class="skill px-3 py-2 bg-blue-100 dark:bg-blue-900/30 rounded-lg">
+                        Statistics
+                    </span>
 
                 </div>
-
-
-                <h4 class="font-black mb-3">
-
-                    Python & Data
-
-                </h4>
-
-
-                <p class="text-sm text-slate-500
-                          dark:text-slate-400">
-
-                    Python • Pandas • NumPy
-                    • Scikit-learn • EDA
-                    • Statistics
-
-                </p>
-
             </div>
 
 
             <!-- SQL -->
+            <div class="glass card rounded-2xl p-7">
+                <i class="fas fa-database text-4xl text-purple-600 mb-5"></i>
 
-            <div class="p-7 bg-white dark:bg-slate-800
-                        rounded-3xl text-center
-                        interactive-card">
+                <h3 class="text-xl font-bold mb-5">
+                    SQL & Databases
+                </h3>
 
-                <div class="w-14 h-14
-                            bg-red-50
-                            dark:bg-red-900/30
-                            rounded-2xl
-                            flex items-center
-                            justify-center
-                            mx-auto mb-5">
+                <div class="flex flex-wrap gap-2">
 
-                    <i class="fas fa-database
-                              text-3xl text-red-500">
-                    </i>
+                    <span class="skill px-3 py-2 bg-purple-100 dark:bg-purple-900/30 rounded-lg">
+                        SQL
+                    </span>
+
+                    <span class="skill px-3 py-2 bg-purple-100 dark:bg-purple-900/30 rounded-lg">
+                        MySQL
+                    </span>
+
+                    <span class="skill px-3 py-2 bg-purple-100 dark:bg-purple-900/30 rounded-lg">
+                        PostgreSQL
+                    </span>
+
+                    <span class="skill px-3 py-2 bg-purple-100 dark:bg-purple-900/30 rounded-lg">
+                        Data Extraction
+                    </span>
+
+                    <span class="skill px-3 py-2 bg-purple-100 dark:bg-purple-900/30 rounded-lg">
+                        Data Cleaning
+                    </span>
 
                 </div>
-
-
-                <h4 class="font-black mb-3">
-
-                    SQL & Databases
-
-                </h4>
-
-
-                <p class="text-sm text-slate-500
-                          dark:text-slate-400">
-
-                    MySQL • SQL Server
-                    • Joins • CTEs
-                    • Window Functions
-
-                </p>
-
             </div>
 
 
-            <!-- Power BI -->
+            <!-- BI -->
+            <div class="glass card rounded-2xl p-7">
+                <i class="fas fa-chart-line text-4xl text-green-600 mb-5"></i>
 
-            <div class="p-7 bg-white dark:bg-slate-800
-                        rounded-3xl text-center
-                        interactive-card">
+                <h3 class="text-xl font-bold mb-5">
+                    BI & Visualization
+                </h3>
 
-                <div class="w-14 h-14
-                            bg-yellow-50
-                            dark:bg-yellow-900/30
-                            rounded-2xl
-                            flex items-center
-                            justify-center
-                            mx-auto mb-5">
+                <div class="flex flex-wrap gap-2">
 
-                    <i class="fas fa-chart-line
-                              text-3xl text-yellow-500">
-                    </i>
+                    <span class="skill px-3 py-2 bg-green-100 dark:bg-green-900/30 rounded-lg">
+                        Power BI
+                    </span>
+
+                    <span class="skill px-3 py-2 bg-green-100 dark:bg-green-900/30 rounded-lg">
+                        DAX
+                    </span>
+
+                    <span class="skill px-3 py-2 bg-green-100 dark:bg-green-900/30 rounded-lg">
+                        Power Query
+                    </span>
+
+                    <span class="skill px-3 py-2 bg-green-100 dark:bg-green-900/30 rounded-lg">
+                        Tableau
+                    </span>
+
+                    <span class="skill px-3 py-2 bg-green-100 dark:bg-green-900/30 rounded-lg">
+                        Excel
+                    </span>
 
                 </div>
-
-
-                <h4 class="font-black mb-3">
-
-                    BI & Visualization
-
-                </h4>
-
-
-                <p class="text-sm text-slate-500
-                          dark:text-slate-400">
-
-                    Power BI • DAX
-                    • Power Query
-                    • Excel • Tableau
-
-                </p>
-
             </div>
 
 
             <!-- AI -->
+            <div class="glass card rounded-2xl p-7">
+                <i class="fas fa-brain text-4xl text-pink-600 mb-5"></i>
 
-            <div class="p-7 bg-white dark:bg-slate-800
-                        rounded-3xl text-center
-                        interactive-card">
+                <h3 class="text-xl font-bold mb-5">
+                    AI & Machine Learning
+                </h3>
 
-                <div class="w-14 h-14
-                            bg-purple-50
-                            dark:bg-purple-900/30
-                            rounded-2xl
-                            flex items-center
-                            justify-center
-                            mx-auto mb-5">
+                <div class="flex flex-wrap gap-2">
 
-                    <i class="fas fa-brain
-                              text-3xl text-purple-500">
-                    </i>
+                    <span class="skill px-3 py-2 bg-pink-100 dark:bg-pink-900/30 rounded-lg">
+                        Scikit-learn
+                    </span>
+
+                    <span class="skill px-3 py-2 bg-pink-100 dark:bg-pink-900/30 rounded-lg">
+                        Regression
+                    </span>
+
+                    <span class="skill px-3 py-2 bg-pink-100 dark:bg-pink-900/30 rounded-lg">
+                        Classification
+                    </span>
+
+                    <span class="skill px-3 py-2 bg-pink-100 dark:bg-pink-900/30 rounded-lg">
+                        XGBoost
+                    </span>
+
+                    <span class="skill px-3 py-2 bg-pink-100 dark:bg-pink-900/30 rounded-lg">
+                        Streamlit
+                    </span>
 
                 </div>
-
-
-                <h4 class="font-black mb-3">
-
-                    AI & ML
-
-                </h4>
-
-
-                <p class="text-sm text-slate-500
-                          dark:text-slate-400">
-
-                    Machine Learning
-                    • Streamlit
-                    • ChatGPT • Claude
-                    • Gemini
-
-                </p>
-
             </div>
 
         </div>
 
     </div>
-
 </section>
 
 
-<!-- ========================================================= -->
-<!-- PROJECTS -->
-<!-- ========================================================= -->
-
-<section id="projects"
-    class="max-w-6xl mx-auto py-24 px-6">
-
-
-    <div class="text-center mb-16">
-
-        <p class="text-primary font-bold text-xs
-                  uppercase tracking-[0.25em] mb-3">
-
-            Selected Work
-
-        </p>
-
-
-        <h2 class="text-4xl md:text-5xl font-black mb-5">
-
-            Featured Projects
-
-        </h2>
-
-
-        <p class="max-w-2xl mx-auto
-                  text-slate-500 dark:text-slate-400">
-
-            Practical analytics, business intelligence
-            and machine learning projects.
-
-        </p>
-
-    </div>
-
-
-    <div class="grid md:grid-cols-2 gap-8">
-
-
-        <!-- Petrol -->
-
-        <div class="project-card md:col-span-2
-                    p-8 md:p-10
-                    bg-white dark:bg-slate-900
-                    rounded-[2rem]
-                    interactive-card">
-
-
-            <span class="inline-block px-3 py-1
-                         rounded-full
-                         bg-blue-50
-                         dark:bg-blue-900/30
-                         text-primary
-                         text-xs font-black
-                         uppercase tracking-wider mb-4">
-
-                Data Analytics
-
-            </span>
-
-
-            <h3 class="text-3xl font-black mb-4">
-
-                India Petrol Price Analysis
-
-            </h3>
-
-
-            <p class="text-slate-500
-                      dark:text-slate-400
-                      leading-relaxed mb-7">
-
-                An end-to-end analytics project for
-                tracking and analyzing petrol prices
-                across locations and time periods.
-
-                The project includes data cleaning,
-                transformation, KPI analysis,
-                comparisons and dashboard reporting.
-
-            </p>
-
-
-            <div class="flex flex-wrap gap-2 mb-7">
-
-                <span class="px-3 py-1.5 rounded-lg
-                             bg-slate-100
-                             dark:bg-slate-800
-                             text-xs font-bold">
-
-                    Excel
-
-                </span>
-
-                <span class="px-3 py-1.5 rounded-lg
-                             bg-slate-100
-                             dark:bg-slate-800
-                             text-xs font-bold">
-
-                    Google Sheets
-
-                </span>
-
-                <span class="px-3 py-1.5 rounded-lg
-                             bg-slate-100
-                             dark:bg-slate-800
-                             text-xs font-bold">
-
-                    Data Cleaning
-
-                </span>
-
-                <span class="px-3 py-1.5 rounded-lg
-                             bg-slate-100
-                             dark:bg-slate-800
-                             text-xs font-bold">
-
-                    KPI Analysis
-
-                </span>
-
-            </div>
-
-
-            <a href="https://github.com/Sakshisingh895"
-               target="_blank"
-               class="text-primary font-black text-sm">
-
-                VIEW GITHUB →
-
-            </a>
-
-        </div>
-
-
-        <!-- Fraud -->
-
-        <div class="project-card p-8
-                    bg-white dark:bg-slate-900
-                    rounded-[2rem]
-                    interactive-card">
-
-
-            <span class="text-xs font-black
-                         uppercase tracking-widest
-                         text-primary">
-
-                Machine Learning
-
-            </span>
-
-
-            <h3 class="text-2xl font-black mt-3 mb-4">
-
-                Credit Card Fraud Detection
-
-            </h3>
-
-
-            <p class="text-slate-500
-                      dark:text-slate-400
-                      leading-relaxed mb-6">
-
-                Built an end-to-end fraud detection
-                pipeline using Python and machine
-                learning.
-
-                Applied preprocessing,
-                imbalance handling,
-                feature engineering and
-                classification models.
-
-            </p>
-
-
-            <div class="flex flex-wrap gap-2">
-
-                <span class="px-3 py-1.5 bg-slate-100
-                             dark:bg-slate-800
-                             rounded-lg text-xs font-bold">
-
-                    Python
-
-                </span>
-
-                <span class="px-3 py-1.5 bg-slate-100
-                             dark:bg-slate-800
-                             rounded-lg text-xs font-bold">
-
-                    Scikit-learn
-
-                </span>
-
-                <span class="px-3 py-1.5 bg-slate-100
-                             dark:bg-slate-800
-                             rounded-lg text-xs font-bold">
-
-                    LightGBM
-
-                </span>
-
-                <span class="px-3 py-1.5 bg-slate-100
-                             dark:bg-slate-800
-                             rounded-lg text-xs font-bold">
-
-                    SMOTE
-
-                </span>
-
-                <span class="px-3 py-1.5 bg-slate-100
-                             dark:bg-slate-800
-                             rounded-lg text-xs font-bold">
-
-                    Streamlit
-
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <!-- Movie Recommendation -->
-
-        <div class="project-card p-8
-                    bg-white dark:bg-slate-900
-                    rounded-[2rem]
-                    interactive-card">
-
-
-            <span class="text-xs font-black
-                         uppercase tracking-widest
-                         text-primary">
-
-                Recommendation System
-
-            </span>
-
-
-            <h3 class="text-2xl font-black mt-3 mb-4">
-
-                Movie Recommendation System
-
-            </h3>
-
-
-            <p class="text-slate-500
-                      dark:text-slate-400
-                      leading-relaxed mb-6">
-
-                Developed a recommendation system
-                using content similarity and
-                cosine similarity.
-
-                Built an interactive Streamlit
-                interface with movie recommendations
-                and API-based poster integration.
-
-            </p>
-
-
-            <div class="flex flex-wrap gap-2">
-
-                <span class="px-3 py-1.5 bg-slate-100
-                             dark:bg-slate-800
-                             rounded-lg text-xs font-bold">
-
-                    Python
-
-                </span>
-
-                <span class="px-3 py-1.5 bg-slate-100
-                             dark:bg-slate-800
-                             rounded-lg text-xs font-bold">
-
-                    Pandas
-
-                </span>
-
-                <span class="px-3 py-1.5 bg-slate-100
-                             dark:bg-slate-800
-                             rounded-lg text-xs font-bold">
-
-                    Cosine Similarity
-
-                </span>
-
-                <span class="px-3 py-1.5 bg-slate-100
-                             dark:bg-slate-800
-                             rounded-lg text-xs font-bold">
-
-                    Streamlit
-
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <!-- BI -->
-
-        <div class="project-card md:col-span-2
-                    p-8 bg-white dark:bg-slate-900
-                    rounded-[2rem]
-                    interactive-card">
-
-
-            <span class="text-xs font-black
-                         uppercase tracking-widest
-                         text-primary">
-
-                Business Intelligence
-
-            </span>
-
-
-            <h3 class="text-2xl font-black mt-3 mb-4">
-
-                Power BI & Automated MIS Reporting
-
-            </h3>
-
-
-            <p class="text-slate-500
-                      dark:text-slate-400
-                      leading-relaxed">
-
-                Designed operational dashboards,
-                KPI reports and automated MIS workflows
-                using Power BI, DAX, Power Query and
-                Advanced Excel.
-
-                Worked on data cleaning, transformation,
-                validation, dashboard development and
-                recurring reporting.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ========================================================= -->
 <!-- EXPERIENCE -->
-<!-- ========================================================= -->
-
-<section id="experience"
-    class="bg-slate-100 dark:bg-slate-900/70
-           py-24 px-6">
-
+<section id="experience" class="py-24 px-6">
 
     <div class="max-w-5xl mx-auto">
 
+        <p class="text-blue-600 font-semibold mb-3">
+            EXPERIENCE
+        </p>
 
-        <div class="text-center mb-14">
-
-            <p class="text-primary font-bold text-xs
-                      uppercase tracking-[0.25em] mb-3">
-
-                Career
-
-            </p>
+        <h2 class="text-4xl md:text-5xl font-bold mb-12">
+            Professional Journey
+        </h2>
 
 
-            <h2 class="text-4xl font-black">
-
-                Experience
-
-            </h2>
-
-        </div>
-
-
-        <div class="space-y-10">
-
+        <div class="space-y-12">
 
             <!-- Great Value -->
+            <div class="timeline pl-8 relative">
 
-            <div class="relative pl-10">
+                <div class="absolute -left-[9px] top-0
+                            w-4 h-4 rounded-full bg-blue-600">
+                </div>
 
-                <div class="timeline-line"></div>
-
-
-                <span class="absolute left-0 top-1
-                             w-6 h-6 rounded-full
-                             bg-primary
-                             ring-8 ring-blue-100
-                             dark:ring-blue-900/30">
+                <span class="text-blue-600 font-semibold">
+                    June 2025 – August 2026
                 </span>
 
+                <h3 class="text-2xl font-bold mt-2">
+                    Process Coordinator / Data & BI
+                </h3>
 
-                <div class="p-7 bg-white dark:bg-slate-900
-                            rounded-3xl
-                            interactive-card">
+                <p class="font-semibold text-lg mt-1">
+                    Great Value Realty
+                </p>
 
+                <ul class="mt-5 space-y-3 text-slate-600 dark:text-slate-300">
 
-                    <div class="flex flex-wrap
-                                justify-between
-                                gap-3 mb-4">
+                    <li>
+                        <i class="fas fa-check text-blue-600 mr-2"></i>
+                        Developed daily, weekly and monthly KPI dashboards
+                        using Power BI and Excel.
+                    </li>
 
-                        <h3 class="text-xl font-black">
+                    <li>
+                        <i class="fas fa-check text-blue-600 mr-2"></i>
+                        Created data models, DAX calculations and interactive
+                        Power BI reports.
+                    </li>
 
-                            Data Analyst
-                            —
-                            Great Value Realty
+                    <li>
+                        <i class="fas fa-check text-blue-600 mr-2"></i>
+                        Used Advanced Excel, Power Query, Pivot Tables and
+                        VBA/Macros for reporting automation.
+                    </li>
 
-                        </h3>
+                    <li>
+                        <i class="fas fa-check text-blue-600 mr-2"></i>
+                        Performed data validation, KPI tracking and MIS/FMS
+                        reporting.
+                    </li>
 
+                    <li>
+                        <i class="fas fa-check text-blue-600 mr-2"></i>
+                        Worked with stakeholders to understand reporting
+                        requirements and deliver actionable insights.
+                    </li>
 
-                        <span class="text-primary
-                                     font-bold text-sm">
-
-                            Jun 2025 – Aug 2026
-
-                        </span>
-
-                    </div>
-
-
-                    <ul class="space-y-2
-                               text-slate-600
-                               dark:text-slate-400
-                               text-sm leading-relaxed
-                               list-disc pl-5">
-
-                        <li>
-                            Built Power BI dashboards
-                            using DAX and data modeling
-                            to monitor operational KPIs.
-                        </li>
-
-                        <li>
-                            Automated Excel and
-                            SharePoint data workflows,
-                            reducing manual consolidation.
-                        </li>
-
-                        <li>
-                            Built data validation
-                            frameworks to improve
-                            reporting accuracy.
-                        </li>
-
-                        <li>
-                            Standardized MIS reporting
-                            using Power Query and
-                            Advanced Excel.
-                        </li>
-
-                        <li>
-                            Worked with stakeholders to
-                            translate business requirements
-                            into analytical reports.
-                        </li>
-
-                    </ul>
-
-                </div>
+                </ul>
 
             </div>
 
 
             <!-- Aayushi -->
+            <div class="timeline pl-8 relative">
 
-            <div class="relative pl-10">
+                <div class="absolute -left-[9px] top-0
+                            w-4 h-4 rounded-full bg-purple-600">
+                </div>
 
-                <span class="absolute left-0 top-1
-                             w-6 h-6 rounded-full
-                             bg-purple-500
-                             ring-8 ring-purple-100
-                             dark:ring-purple-900/30">
+                <span class="text-purple-600 font-semibold">
+                    June 2024 – June 2025
                 </span>
 
+                <h3 class="text-2xl font-bold mt-2">
+                    Data Analyst
+                </h3>
 
-                <div class="p-7 bg-white dark:bg-slate-900
-                            rounded-3xl
-                            interactive-card">
+                <p class="font-semibold text-lg mt-1">
+                    Aayushi Technology
+                </p>
+
+                <ul class="mt-5 space-y-3 text-slate-600 dark:text-slate-300">
+
+                    <li>
+                        <i class="fas fa-check text-purple-600 mr-2"></i>
+                        Cleaned and analyzed datasets using Python, SQL and
+                        Advanced Excel.
+                    </li>
+
+                    <li>
+                        <i class="fas fa-check text-purple-600 mr-2"></i>
+                        Created Power BI and Tableau dashboards for KPI
+                        monitoring and business reporting.
+                    </li>
+
+                    <li>
+                        <i class="fas fa-check text-purple-600 mr-2"></i>
+                        Performed exploratory data analysis and identified
+                        meaningful data patterns.
+                    </li>
+
+                    <li>
+                        <i class="fas fa-check text-purple-600 mr-2"></i>
+                        Automated reporting workflows, reducing manual
+                        reporting effort by approximately 40%.
+                    </li>
+
+                    <li>
+                        <i class="fas fa-check text-purple-600 mr-2"></i>
+                        Collected data from multiple platforms and supported
+                        database and cloud-based data workflows.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 
-                    <div class="flex flex-wrap
-                                justify-between
-                                gap-3 mb-4">
+<!-- PROJECTS -->
+<section id="projects"
+         class="py-24 px-6 bg-slate-100 dark:bg-slate-900">
 
-                        <h3 class="text-xl font-black">
+    <div class="max-w-7xl mx-auto">
 
-                            Data Analyst
-                            —
-                            Aayushi Technology
+        <p class="text-blue-600 font-semibold mb-3">
+            PORTFOLIO
+        </p>
 
-                        </h3>
+        <h2 class="text-4xl md:text-5xl font-bold mb-12">
+            Featured Projects
+        </h2>
 
 
-                        <span class="text-purple-500
-                                     font-bold text-sm">
+        <div class="grid md:grid-cols-2 gap-7">
 
-                            Jan 2024 – Jun 2025
 
-                        </span>
+            <!-- Petrol -->
+            <div class="project-card glass card rounded-2xl p-7">
 
+                <div class="flex justify-between items-start">
+
+                    <div>
+                        <i class="fas fa-gas-pump text-4xl text-blue-600"></i>
                     </div>
 
+                    <span class="text-sm bg-blue-100
+                                 dark:bg-blue-900/30
+                                 px-3 py-1 rounded-full">
+                        Data Analysis
+                    </span>
 
-                    <ul class="space-y-2
-                               text-slate-600
-                               dark:text-slate-400
-                               text-sm leading-relaxed
-                               list-disc pl-5">
+                </div>
 
-                        <li>
-                            Analyzed large datasets using
-                            SQL, Python, Pandas and NumPy.
-                        </li>
+                <h3 class="text-2xl font-bold mt-6">
+                    India Petrol Price Analysis
+                </h3>
 
-                        <li>
-                            Built automated ETL and
-                            reporting workflows.
-                        </li>
+                <p class="text-slate-600 dark:text-slate-300 mt-4 leading-relaxed">
+                    An analytical project focused on studying petrol price
+                    variations across locations and presenting the findings
+                    through dashboards and visual analysis.
+                </p>
 
-                        <li>
-                            Developed Power BI and Tableau
-                            dashboards for business KPIs.
-                        </li>
+                <div class="flex flex-wrap gap-2 mt-5">
 
-                        <li>
-                            Performed EDA, statistical
-                            analysis and feature engineering.
-                        </li>
+                    <span class="px-3 py-1 bg-slate-200
+                                 dark:bg-slate-800 rounded-lg">
+                        Excel
+                    </span>
 
-                        <li>
-                            Implemented data-quality and
-                            reconciliation checks.
-                        </li>
+                    <span class="px-3 py-1 bg-slate-200
+                                 dark:bg-slate-800 rounded-lg">
+                        Google Sheets
+                    </span>
 
-                    </ul>
+                    <span class="px-3 py-1 bg-slate-200
+                                 dark:bg-slate-800 rounded-lg">
+                        Dashboard
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Fraud -->
+            <div class="project-card glass card rounded-2xl p-7">
+
+                <div class="flex justify-between items-start">
+
+                    <i class="fas fa-shield-halved text-4xl text-red-500"></i>
+
+                    <span class="text-sm bg-red-100
+                                 dark:bg-red-900/30
+                                 px-3 py-1 rounded-full">
+                        Machine Learning
+                    </span>
+
+                </div>
+
+                <h3 class="text-2xl font-bold mt-6">
+                    Credit Card Fraud Detection
+                </h3>
+
+                <p class="text-slate-600 dark:text-slate-300 mt-4 leading-relaxed">
+                    Machine learning project for identifying fraudulent
+                    transactions using preprocessing, imbalance handling,
+                    classification models and evaluation metrics.
+                </p>
+
+                <div class="flex flex-wrap gap-2 mt-5">
+
+                    <span class="px-3 py-1 bg-slate-200
+                                 dark:bg-slate-800 rounded-lg">
+                        Python
+                    </span>
+
+                    <span class="px-3 py-1 bg-slate-200
+                                 dark:bg-slate-800 rounded-lg">
+                        Scikit-learn
+                    </span>
+
+                    <span class="px-3 py-1 bg-slate-200
+                                 dark:bg-slate-800 rounded-lg">
+                        XGBoost
+                    </span>
+
+                    <span class="px-3 py-1 bg-slate-200
+                                 dark:bg-slate-800 rounded-lg">
+                        Streamlit
+                    </span>
+
+                </div>
+
+                <a href="https://github.com/Sakshisingh895"
+                   target="_blank"
+                   class="inline-block mt-6 text-blue-600 font-semibold">
+                    View on GitHub →
+                </a>
+
+            </div>
+
+
+            <!-- Movie -->
+            <div class="project-card glass card rounded-2xl p-7">
+
+                <div class="flex justify-between items-start">
+
+                    <i class="fas fa-film text-4xl text-purple-600"></i>
+
+                    <span class="text-sm bg-purple-100
+                                 dark:bg-purple-900/30
+                                 px-3 py-1 rounded-full">
+                        Recommendation System
+                    </span>
+
+                </div>
+
+                <h3 class="text-2xl font-bold mt-6">
+                    Movie Recommendation System
+                </h3>
+
+                <p class="text-slate-600 dark:text-slate-300 mt-4 leading-relaxed">
+                    Streamlit-based recommendation application using
+                    cosine similarity to generate personalized movie
+                    recommendations.
+                </p>
+
+                <div class="flex flex-wrap gap-2 mt-5">
+
+                    <span class="px-3 py-1 bg-slate-200
+                                 dark:bg-slate-800 rounded-lg">
+                        Python
+                    </span>
+
+                    <span class="px-3 py-1 bg-slate-200
+                                 dark:bg-slate-800 rounded-lg">
+                        Pandas
+                    </span>
+
+                    <span class="px-3 py-1 bg-slate-200
+                                 dark:bg-slate-800 rounded-lg">
+                        Streamlit
+                    </span>
+
+                    <span class="px-3 py-1 bg-slate-200
+                                 dark:bg-slate-800 rounded-lg">
+                        TMDB API
+                    </span>
+
+                </div>
+
+                <a href="https://github.com/Sakshisingh895"
+                   target="_blank"
+                   class="inline-block mt-6 text-blue-600 font-semibold">
+                    View on GitHub →
+                </a>
+
+            </div>
+
+
+            <!-- Power BI -->
+            <div class="project-card glass card rounded-2xl p-7">
+
+                <div class="flex justify-between items-start">
+
+                    <i class="fas fa-chart-pie text-4xl text-green-600"></i>
+
+                    <span class="text-sm bg-green-100
+                                 dark:bg-green-900/30
+                                 px-3 py-1 rounded-full">
+                        Business Intelligence
+                    </span>
+
+                </div>
+
+                <h3 class="text-2xl font-bold mt-6">
+                    Power BI & Automated MIS Reporting
+                </h3>
+
+                <p class="text-slate-600 dark:text-slate-300 mt-4 leading-relaxed">
+                    Business intelligence reporting solution involving
+                    data transformation, KPI tracking, Power BI data
+                    modeling, DAX calculations and automated reporting.
+                </p>
+
+                <div class="flex flex-wrap gap-2 mt-5">
+
+                    <span class="px-3 py-1 bg-slate-200
+                                 dark:bg-slate-800 rounded-lg">
+                        Power BI
+                    </span>
+
+                    <span class="px-3 py-1 bg-slate-200
+                                 dark:bg-slate-800 rounded-lg">
+                        DAX
+                    </span>
+
+                    <span class="px-3 py-1 bg-slate-200
+                                 dark:bg-slate-800 rounded-lg">
+                        Power Query
+                    </span>
+
+                    <span class="px-3 py-1 bg-slate-200
+                                 dark:bg-slate-800 rounded-lg">
+                        Excel
+                    </span>
 
                 </div>
 
@@ -1341,90 +812,101 @@
 </section>
 
 
-<!-- ========================================================= -->
-<!-- CONTACT -->
-<!-- ========================================================= -->
+<!-- EDUCATION -->
+<section class="py-24 px-6">
 
-<section id="contact"
-    class="max-w-6xl mx-auto py-24 px-6">
+    <div class="max-w-5xl mx-auto">
 
-
-    <div class="bg-gradient-to-r
-                from-blue-600 to-indigo-600
-                rounded-[2rem]
-                p-10 md:p-14
-                text-white text-center">
-
-
-        <p class="text-blue-100 font-bold
-                  text-xs uppercase
-                  tracking-[0.25em] mb-4">
-
-            Let's Connect
-
+        <p class="text-blue-600 font-semibold mb-3">
+            EDUCATION
         </p>
 
-
-        <h2 class="text-4xl md:text-5xl
-                   font-black mb-5">
-
-            Open to Data Opportunities
-
+        <h2 class="text-4xl md:text-5xl font-bold mb-10">
+            Academic Background
         </h2>
 
+        <div class="glass card rounded-2xl p-8">
 
-        <p class="max-w-2xl mx-auto
-                  text-blue-100
-                  leading-relaxed mb-8">
+            <div class="flex flex-col md:flex-row
+                        justify-between gap-5">
 
-            Interested in Data Analyst, Power BI,
-            Business Analyst, Reporting,
-            Data Operations and related roles.
+                <div>
 
+                    <h3 class="text-2xl font-bold">
+                        Bachelor of Technology
+                    </h3>
+
+                    <p class="text-lg mt-2">
+                        Computer Science & Engineering
+                    </p>
+
+                    <p class="text-blue-600 mt-2 font-semibold">
+                        Artificial Intelligence & Machine Learning
+                    </p>
+
+                </div>
+
+                <div class="font-semibold text-slate-500">
+                    2020 – 2024
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact"
+         class="py-24 px-6 bg-slate-100 dark:bg-slate-900">
+
+    <div class="max-w-4xl mx-auto text-center">
+
+        <p class="text-blue-600 font-semibold mb-3">
+            GET IN TOUCH
         </p>
 
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+            Let's Work Together
+        </h2>
 
-        <div class="flex flex-wrap
+        <p class="text-lg text-slate-600 dark:text-slate-300 mb-10">
+            I'm currently open to Data Analyst, Power BI, Business
+            Analyst, Data Operations and related opportunities.
+        </p>
+
+        <div class="flex flex-col sm:flex-row
                     justify-center gap-4">
 
-
             <a href="mailto:sakshisinghss0929@gmail.com"
-                class="btn-hover bg-white
-                       text-blue-600
-                       px-7 py-3.5 rounded-xl
-                       font-black">
+               class="px-7 py-3 bg-blue-600 text-white
+                      rounded-xl font-semibold hover:bg-blue-700">
 
                 <i class="fas fa-envelope mr-2"></i>
-
-                Email
-
+                Email Me
             </a>
 
+            <a href="https://www.linkedin.com/"
+               target="_blank"
+               class="px-7 py-3 border border-slate-300
+                      dark:border-slate-700 rounded-xl
+                      font-semibold hover:border-blue-500">
 
-            <a href="tel:+918699762183"
-                class="btn-hover bg-blue-700
-                       text-white
-                       px-7 py-3.5 rounded-xl
-                       font-black">
-
-                <i class="fas fa-phone mr-2"></i>
-
-                Call
-
+                <i class="fab fa-linkedin mr-2"></i>
+                LinkedIn
             </a>
-
 
             <a href="https://github.com/Sakshisingh895"
-                target="_blank"
-                class="btn-hover bg-slate-950
-                       text-white
-                       px-7 py-3.5 rounded-xl
-                       font-black">
+               target="_blank"
+               class="px-7 py-3 border border-slate-300
+                      dark:border-slate-700 rounded-xl
+                      font-semibold hover:border-blue-500">
 
                 <i class="fab fa-github mr-2"></i>
-
                 GitHub
-
             </a>
 
         </div>
@@ -1434,79 +916,33 @@
 </section>
 
 
-<!-- ========================================================= -->
 <!-- FOOTER -->
-<!-- ========================================================= -->
+<footer class="py-8 text-center border-t
+               border-slate-200 dark:border-slate-800">
 
-<footer class="border-t
-               border-slate-200
-               dark:border-slate-800
-               py-8 px-6">
-
-
-    <div class="max-w-6xl mx-auto
-                flex flex-col md:flex-row
-                justify-between gap-3
-                text-sm text-slate-500">
-
-
-        <p>
-
-            © 2026 Sakshi Singh.
-            All rights reserved.
-
-        </p>
-
-
-        <a href="https://github.com/Sakshisingh895"
-           target="_blank"
-           class="hover:text-primary">
-
-            GitHub
-
-        </a>
-
-    </div>
+    <p class="text-slate-500">
+        © 2026 Sakshi Singh. Built with HTML & Tailwind CSS.
+    </p>
 
 </footer>
 
 
-<!-- ========================================================= -->
-<!-- JAVASCRIPT -->
-<!-- ========================================================= -->
-
 <script>
 
-function toggleTheme() {
+    function toggleDarkMode() {
 
-    document.documentElement.classList.toggle("dark");
+        document.documentElement.classList.toggle("dark");
 
-    const dark =
-        document.documentElement.classList.contains("dark");
+        const icon = document.getElementById("themeIcon");
 
-    localStorage.setItem(
-        "theme",
-        dark ? "dark" : "light"
-    );
-
-    document.getElementById("theme-icon").className =
-        dark
-        ? "fas fa-sun"
-        : "fas fa-moon";
-}
-
-
-if (localStorage.getItem("theme") === "dark") {
-
-    document.documentElement.classList.add("dark");
-
-    document.getElementById("theme-icon").className =
-        "fas fa-sun";
-
-}
+        if (document.documentElement.classList.contains("dark")) {
+            icon.className = "fas fa-sun";
+        } else {
+            icon.className = "fas fa-moon";
+        }
+    }
 
 </script>
-
 
 </body>
 </html>
